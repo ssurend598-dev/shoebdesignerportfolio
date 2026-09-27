@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shoeb — Graphic Designer</title>
+<meta name="description" content="Shoeb — Graphic Design Portfolio">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--black:#070707;--cream:#f4f2ed;--muted:#77736b;--line:#d7d3ca}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:#111;font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.nav{height:82px;background:#050505;color:#fff;display:flex;align-items:center;position:sticky;top:0;z-index:50}
+.nav-inner{width:min(1450px,100%);padding:0 34px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font:600 25px "Space Grotesk";letter-spacing:.02em}.logo small{font:400 11px "DM Sans";letter-spacing:.18em;margin-left:9px;color:#aaa}
+.navlinks{display:flex;align-items:center;gap:32px;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.navlinks a:hover{opacity:.6}.nav-cta{background:#fff;color:#111;padding:13px 21px;border-radius:2px}
+.hero{min-height:860px;background:#090909;color:#fff;position:relative;overflow:hidden;padding:80px 34px 70px}
+.hero-inner{width:min(1450px,100%);margin:auto;position:relative;height:100%}
+.hero-copy{position:relative;z-index:4;text-align:center;padding-top:10px}
+.eyebrow{font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:#aaa;margin-bottom:35px}
+.hero h1{font:500 clamp(65px,10.5vw,158px)/.82 "Space Grotesk";letter-spacing:-.085em;margin:0 auto;max-width:1100px}
+.hero h1 span{display:block}.hero h1 .accent{font-style:italic;font-weight:400}
+.hero-desc{font-size:16px;line-height:1.5;color:#bcbcbc;max-width:530px;margin:36px auto}
+.primary{display:inline-block;background:#fff;color:#111;padding:16px 28px;border-radius:2px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.hero-stage{position:absolute;inset:360px 0 0;pointer-events:none}
+.float{position:absolute;box-shadow:0 25px 70px #0008;transition:transform .8s ease}
+.float img{width:100%;height:100%;object-fit:cover;display:block}
+.f1{width:310px;height:400px;left:0;top:120px;transform:rotate(-7deg)}.f2{width:530px;height:365px;left:50%;top:55px;transform:translateX(-50%) rotate(-1deg);z-index:3}.f3{width:310px;height:400px;right:0;top:120px;transform:rotate(6deg)}
+.hero:hover .f1{transform:rotate(-10deg) translate(-12px,10px)}.hero:hover .f2{transform:translateX(-50%) translateY(-12px)}.hero:hover .f3{transform:rotate(10deg) translate(12px,10px)}
+.marquee{background:#111;color:#fff;overflow:hidden;border-top:1px solid #333;border-bottom:1px solid #333;white-space:nowrap}
+.marquee-track{display:inline-block;padding:17px 0;font:500 18px "Space Grotesk";letter-spacing:.04em;animation:move 22s linear infinite}
+.marquee-track span{margin:0 30px;color:#777}@keyframes move{to{transform:translateX(-50%)}}
+.wrap{width:min(1450px,100%);margin:auto;padding:0 34px}
+.section{padding:115px 0}.section-top{display:flex;justify-content:space-between;align-items:end;border-top:1px solid var(--line);padding-top:22px;margin-bottom:38px}
+.section-title{font:500 clamp(48px,6vw,86px)/.9 "Space Grotesk";letter-spacing:-.065em;margin:0}.section-note{color:var(--muted);font-size:13px;max-width:300px;line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.work-card{cursor:pointer;grid-column:span 6}.work-card:nth-child(3n+1){grid-column:span 7}.work-card:nth-child(3n){grid-column:span 5}
+.image-wrap{overflow:hidden;background:#ddd9d0;aspect-ratio:4/3}.image-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}.work-card:hover .image-wrap img{transform:scale(1.045)}
+.work-meta{display:grid;grid-template-columns:45px 1fr auto;gap:10px;padding:14px 2px 40px;align-items:center;font-size:13px}.work-meta span,.work-meta em{color:var(--muted);font-style:normal}.work-meta strong{font-weight:500}
+.about{background:#111;color:#fff;padding:120px 0}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px}.about h2{font:500 clamp(55px,8vw,112px)/.87 "Space Grotesk";letter-spacing:-.075em;margin:0}.about p{font-size:20px;line-height:1.65;color:#c6c6c6;max-width:590px;margin:8px 0 45px}
+.services{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #333}.service{padding:16px 0;border-bottom:1px solid #333;color:#ddd;font-size:14px}
+.contact{padding:125px 0 105px}.contact h2{font:500 clamp(65px,10vw,145px)/.82 "Space Grotesk";letter-spacing:-.085em;margin:0;max-width:1000px}.contact-bottom{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:65px}.contact-copy{color:#666;max-width:430px;line-height:1.6}.contact-links{display:flex;gap:12px;flex-wrap:wrap}.contact-links a{border:1px solid #aaa;padding:14px 19px;border-radius:100px;font-size:13px}.contact-links a:hover{background:#111;color:#fff;border-color:#111}
+footer{background:#050505;color:#777;padding:25px 34px;font-size:12px}footer .fi{width:min(1450px,100%);margin:auto;display:flex;justify-content:space-between}
+.modal{display:none;position:fixed;inset:0;background:#000e;z-index:100;padding:20px;place-items:center}.modal.open{display:grid}.modal-box{background:var(--cream);width:min(1250px,100%);max-height:95vh;overflow:auto;padding:20px}.close{float:right;border:0;background:transparent;font-size:32px;cursor:pointer}.modal-box img{width:100%;max-height:78vh;object-fit:contain;background:#ddd;display:block}.modal-info{padding:18px 0 8px;display:flex;justify-content:space-between;gap:20px}.modal-info h3{font:500 34px "Space Grotesk";margin:0}.modal-info p{color:#777;margin:8px 0}
+@media(max-width:800px){
+.nav{height:68px}.nav-inner{padding:0 18px}.navlinks a:not(.nav-cta){display:none}.hero{min-height:730px;padding:65px 18px}.hero-stage{inset:360px 18px 0}.f1,.f3{width:145px;height:210px;top:125px}.f2{width:250px;height:190px;top:55px}.wrap{padding:0 18px}.section{padding:80px 0}.section-top{display:block}.section-note{margin-top:20px}.grid{display:block}.work-card{margin-bottom:10px}.about-grid{display:block}.about p{margin-top:38px}.services{margin-top:30px}.contact{padding:85px 0}.contact-bottom{display:block}.contact-links{margin-top:35px}footer{padding:22px 18px}footer .fi{display:block}footer .fi span+span{display:block;margin-top:7px}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner"><a class="logo" href="#">SHOEB.<small>GRAPHIC DESIGN</small></a><nav class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="nav-cta" href="#contact">Let's Talk</a></nav></div></header>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-copy"><div class="eyebrow">Graphic Designer · Visual Creator</div>
+<h1><span>Designs that</span><span class="accent">make it real.</span></h1>
+<p class="hero-desc">Bold visuals, memorable identities and creative artwork for brands, businesses, restaurants and digital campaigns.</p>
+<a class="primary" href="#work">Explore my work ↓</a></div>
+<div class="hero-stage">
+<div class="float f1"><img src="assets/design-01.jpg" alt=""></div>
+<div class="float f2"><img src="assets/design-02.jpg" alt=""></div>
+<div class="float f3"><img src="assets/design-03.png" alt=""></div>
+</div></div></section>
+
+<div class="marquee"><div class="marquee-track">BRANDING <span>✦</span> POSTERS <span>✦</span> BANNERS <span>✦</span> RESTAURANT DESIGN <span>✦</span> SOCIAL MEDIA <span>✦</span> PRINT DESIGN <span>✦</span> CREATIVE ARTWORK <span>✦</span> BRANDING <span>✦</span> POSTERS <span>✦</span></div></div>
+
+<section id="work" class="section wrap"><div class="section-top"><h2 class="section-title">Selected Work</h2><div class="section-note">15 designs from Shoeb's portfolio. Click any project to view it large.</div></div><div class="grid"><article class="work-card" data-index="0">
+      <div class="image-wrap"><img src="assets/design-01.jpg" alt="Creative Visual" loading="lazy"></div>
+      <div class="work-meta"><span>01</span><strong>Creative Visual</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="1">
+      <div class="image-wrap"><img src="assets/design-02.jpg" alt="Brand &amp; Identity" loading="lazy"></div>
+      <div class="work-meta"><span>02</span><strong>Brand & Identity</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="2">
+      <div class="image-wrap"><img src="assets/design-03.png" alt="Poster Design" loading="lazy"></div>
+      <div class="work-meta"><span>03</span><strong>Poster Design</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="3">
+      <div class="image-wrap"><img src="assets/design-04.jpg" alt="Creative Campaign" loading="lazy"></div>
+      <div class="work-meta"><span>04</span><strong>Creative Campaign</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="4">
+      <div class="image-wrap"><img src="assets/design-05.jpg" alt="Print Design" loading="lazy"></div>
+      <div class="work-meta"><span>05</span><strong>Print Design</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="5">
+      <div class="image-wrap"><img src="assets/design-06.avif" alt="Watercolor Collage" loading="lazy"></div>
+      <div class="work-meta"><span>06</span><strong>Watercolor Collage</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="6">
+      <div class="image-wrap"><img src="assets/design-07.webp" alt="Photo Composition" loading="lazy"></div>
+      <div class="work-meta"><span>07</span><strong>Photo Composition</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="7">
+      <div class="image-wrap"><img src="assets/design-08.webp" alt="Logo Design" loading="lazy"></div>
+      <div class="work-meta"><span>08</span><strong>Logo Design</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="8">
+      <div class="image-wrap"><img src="assets/design-09.avif" alt="Mother &amp; Daughter" loading="lazy"></div>
+      <div class="work-meta"><span>09</span><strong>Mother & Daughter</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="9">
+      <div class="image-wrap"><img src="assets/design-10.avif" alt="Mother&#x27;s Day" loading="lazy"></div>
+      <div class="work-meta"><span>10</span><strong>Mother's Day</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="10">
+      <div class="image-wrap"><img src="assets/design-11.avif" alt="Portrait Poster" loading="lazy"></div>
+      <div class="work-meta"><span>11</span><strong>Portrait Poster</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="11">
+      <div class="image-wrap"><img src="assets/design-12.avif" alt="Real Estate" loading="lazy"></div>
+      <div class="work-meta"><span>12</span><strong>Real Estate</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="12">
+      <div class="image-wrap"><img src="assets/design-13.avif" alt="Property Campaign" loading="lazy"></div>
+      <div class="work-meta"><span>13</span><strong>Property Campaign</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="13">
+      <div class="image-wrap"><img src="assets/design-14.jpg" alt="Photo Collage" loading="lazy"></div>
+      <div class="work-meta"><span>14</span><strong>Photo Collage</strong><em>View project ↗</em></div>
+    </article>
+<article class="work-card" data-index="14">
+      <div class="image-wrap"><img src="assets/design-15.jpg" alt="Travel Campaign" loading="lazy"></div>
+      <div class="work-meta"><span>15</span><strong>Travel Campaign</strong><em>View project ↗</em></div>
+    </article></div></section>
+
+<section id="about" class="about"><div class="wrap"><div class="about-grid"><h2>Good design<br>gets noticed.</h2><div><p>I’m Shoeb, a graphic designer focused on creating clean, bold and engaging visual communication. From restaurant banners to posters, branding and promotional artwork, every design is made to stand out.</p><div class="services"><div class="service">01 — Brand Identity</div><div class="service">02 — Posters & Banners</div><div class="service">03 — Restaurant Design</div><div class="service">04 — Social Media</div><div class="service">05 — Print Design</div><div class="service">06 — Creative Artwork</div></div></div></div></div></section>
+
+<section id="contact" class="contact wrap"><h2>Have a design<br>in mind?</h2><div class="contact-bottom"><div class="contact-copy">Need a creative design for your business, brand or campaign? Get in touch and let's create something memorable.</div><div class="contact-links"><a href="tel:+917417764287">+91 7417764287</a><a href="mailto:shoebali74177@gmail.com">shoebali74177@gmail.com</a></div></div></section>
+
+<footer><div class="fi"><span>© 2026 Shoeb — Graphic Designer</span><span>All rights reserved.</span></div></footer>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">×</button><img id="modalImg" alt=""><div class="modal-info"><div><h3 id="modalTitle"></h3><p>Graphic Design · Portfolio Project</p></div><div id="modalNum"></div></div></div></div>
+<script>
+const modal=document.getElementById('modal'),img=document.getElementById('modalImg'),title=document.getElementById('modalTitle'),num=document.getElementById('modalNum');
+document.querySelectorAll('.work-card').forEach((card,i)=>card.addEventListener('click',()=>{
+const im=card.querySelector('img');img.src=im.src;img.alt=im.alt;title.textContent=im.alt;num.textContent=String(i+1).padStart(2,'0');modal.classList.add('open');document.body.style.overflow='hidden';
+}));
+function closeModal(){modal.classList.remove('open');document.body.style.overflow='';}
+document.getElementById('close').onclick=closeModal;modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+</script>
+</body></html>
